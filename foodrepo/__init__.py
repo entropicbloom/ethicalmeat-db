@@ -1,0 +1,1 @@
+"""FoodRepo API integration module for fetching product data."""

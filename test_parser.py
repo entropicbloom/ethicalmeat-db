@@ -5,8 +5,8 @@ import sys
 import hashlib
 from pathlib import Path
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+# Add emh to path
+sys.path.insert(0, str(Path(__file__).parent / "emh"))
 
 from scraper import EMHScraper
 

@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import List, Dict, Any
 
-from scraper import EMHScraper
+from .scraper import EMHScraper
 
 
 def save_json(data: List[Dict[str, Any]], output_path: Path):
