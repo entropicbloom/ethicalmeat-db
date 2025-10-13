@@ -20,7 +20,8 @@ class BarcodeMappingPipeline:
     def __init__(
         self,
         api_key: Optional[str] = None,
-        rate_limit: float = 0.2,
+        rate_limit: float = 0.1,
+        page_size: int = 1000,
         cache_dir: Optional[Path] = None,
         use_simple_rules: bool = True
     ):
@@ -29,10 +30,11 @@ class BarcodeMappingPipeline:
         Args:
             api_key: FoodRepo API key
             rate_limit: Rate limit for API requests
+            page_size: Products per API request
             cache_dir: Directory for caching data
             use_simple_rules: Whether to use regex rules before LLM classification
         """
-        self.foodrepo_client = FoodRepoClient(api_key=api_key, rate_limit=rate_limit)
+        self.foodrepo_client = FoodRepoClient(api_key=api_key, rate_limit=rate_limit, page_size=page_size)
         self.meat_filter = MeatProductFilter()
         self.classifier = ProductClassifier(use_simple_rules=use_simple_rules)
         self.emh_mapper = EMHRatingMapper()
@@ -60,34 +62,35 @@ class BarcodeMappingPipeline:
         print("BARCODE TO WELFARE RATING MAPPING PIPELINE")
         print("=" * 80)
 
-        # Step 1: Fetch products from FoodRepo
-        products_cache_path = self.cache_dir / "foodrepo_products.json"
+        # Step 1 & 2: Fetch and filter products (cache only meat products)
+        meat_products_cache_path = self.cache_dir / "meat_products.json"
 
-        if use_cache and products_cache_path.exists():
-            print(f"\n1. Loading cached FoodRepo products from {products_cache_path}")
-            products = self.foodrepo_client.load_products_cache(products_cache_path)
+        if use_cache and meat_products_cache_path.exists():
+            print(f"\n1. Loading cached meat products from {meat_products_cache_path}")
+            with meat_products_cache_path.open('r', encoding='utf-8') as f:
+                meat_products = json.load(f)
+            print(f"Loaded {len(meat_products)} meat products from cache")
         else:
             print(f"\n1. Fetching products from FoodRepo API (limit: {limit or 'all'})")
-            products = self.foodrepo_client.fetch_products(limit=limit)
+            all_products = self.foodrepo_client.fetch_products(limit=limit)
 
-            if use_cache:
-                self.foodrepo_client.save_products_cache(products, products_cache_path)
+            if not all_products:
+                print("❌ No products fetched from FoodRepo")
+                return []
 
-        if not products:
-            print("❌ No products fetched from FoodRepo")
-            return []
+            print(f"\n2. Filtering for meat products")
+            meat_products = self.meat_filter.filter_meat_products(all_products)
 
-        # Step 2: Filter to meat products
-        print(f"\n2. Filtering for meat products")
-        meat_products = self.meat_filter.filter_meat_products(products)
+            # Cache only meat products
+            if use_cache and meat_products:
+                meat_products_cache_path.parent.mkdir(parents=True, exist_ok=True)
+                with meat_products_cache_path.open('w', encoding='utf-8') as f:
+                    json.dump(meat_products, f, indent=2, ensure_ascii=False)
+                print(f"Saved {len(meat_products)} meat products to cache: {meat_products_cache_path}")
 
         if not meat_products:
             print("❌ No meat products found after filtering")
             return []
-
-        # Print filter stats
-        filter_stats = self.meat_filter.get_filter_stats(products)
-        print(f"   Filter stats: {filter_stats}")
 
         # Step 3: Classify animal types and labels
         print(f"\n3. Classifying animal types and Swiss labels")
@@ -268,8 +271,15 @@ def main():
     parser.add_argument(
         '--rate-limit',
         type=float,
-        default=0.2,
-        help='Seconds between FoodRepo API requests (default: 0.2)'
+        default=0.1,
+        help='Seconds between FoodRepo API requests (default: 0.1)'
+    )
+
+    parser.add_argument(
+        '--page-size',
+        type=int,
+        default=1000,
+        help='Products per API request (default: 1000)'
     )
 
     parser.add_argument(
@@ -284,6 +294,7 @@ def main():
         # Initialize pipeline
         pipeline = BarcodeMappingPipeline(
             rate_limit=args.rate_limit,
+            page_size=args.page_size,
             cache_dir=Path(args.cache_dir),
             use_simple_rules=not args.no_rules
         )

@@ -42,36 +42,48 @@ class ProductClassifier:
     }
 
     # Simple rules to apply before LLM classification (updated for EMH values)
-    SIMPLE_RULES = [
-        # Animal detection rules (EMH German terms)
+    # Note: Order matters! More specific patterns should come first
+    ANIMAL_RULES = [
+        # Animal detection rules (EMH German terms) - more specific first
+        (re.compile(r'\bkalbfleisch\b', re.I), 'kalbfleisch'),
+        (re.compile(r'\bkalb\b(?!fleisch)', re.I), 'kalbfleisch'),  # "kalb" but not "kalbfleisch"
+        (re.compile(r'\b(veal|veau|vitello)\b', re.I), 'kalbfleisch'),
+        (re.compile(r'\brindfleisch\b', re.I), 'rindfleisch'),
         (re.compile(r'\b(rind|beef|boeuf|manzo)\b', re.I), 'rindfleisch'),
+        (re.compile(r'\bschweinefleisch\b', re.I), 'schweinefleisch'),
         (re.compile(r'\b(schwein|pork|porc|maiale)\b', re.I), 'schweinefleisch'),
-        (re.compile(r'\b(kalb|veal|veau|vitello)\b', re.I), 'kalbfleisch'),
         (re.compile(r'\b(poulet|huhn|chicken|pollo|hähnchen)\b', re.I), 'poulet'),
-        (re.compile(r'\b(ei|eier|egg|eggs|oeuf|oeufs|uovo|uova)\b', re.I), 'eier'),
-        (re.compile(r'\b(milch|milk|lait|latte)\b', re.I), 'milch'),
+        # Be very specific with eggs - only match when clearly about eggs, not as substring
+        (re.compile(r'\b(eier|eggs|oeufs|uova)\b', re.I), 'eier'),
+        # Be very specific with milk - only standalone word
+        (re.compile(r'\bmilch\b', re.I), 'milch'),
+        (re.compile(r'\b(milk|lait|latte)\b(?!\s*chocolate)', re.I), 'milch'),
+    ]
 
-        # Label detection rules (exact EMH label matches)
+    LABEL_RULES = [
+        # Label detection rules (exact EMH label matches) - more specific first
+        (re.compile(r'\bnaturaplan\b', re.I), 'COOP NATURAPLAN D'),
+        (re.compile(r'\bnatura[- ]?plan\b', re.I), 'COOP NATURAPLAN D'),
+        (re.compile(r'\bnaturafarm\b', re.I), 'COOP NATURAFARM D'),
+        (re.compile(r'\bnatura[- ]?farm\b', re.I), 'COOP NATURAFARM D'),
         (re.compile(r'\bnature suisse bio\b', re.I), 'NATURE SUISSE BIO D'),
         (re.compile(r'\bnature suisse\b', re.I), 'NATURE SUISSE D'),
         (re.compile(r'\bnatura[- ]?beef\b', re.I), 'NATURA-BEEF D'),
         (re.compile(r'\bnatura[- ]?veal\b', re.I), 'NATURA-VEAL DE'),
         (re.compile(r'\bbio suisse|bio knospe|knospe\b', re.I), 'BIO SUISSE / BIO KNOSPE D'),
-        (re.compile(r'\bmigros.*weide[- ]?beef\b', re.I), 'MIGROS WEIDE-BEEF D'),
         (re.compile(r'\bmigros.*bio.*weide[- ]?beef\b', re.I), 'MIGROS BIO WEIDE-BEEF D'),
+        (re.compile(r'\bmigros.*weide[- ]?beef\b', re.I), 'MIGROS WEIDE-BEEF D'),
         (re.compile(r'\bmigros.*bio.*schweiz', re.I), 'MIGROS BIO MIT SCHWEIZERKREUZ D'),
-        (re.compile(r'\bcoop.*naturafarm\b', re.I), 'COOP NATURAFARM D'),
-        (re.compile(r'\bcoop.*naturaplan\b', re.I), 'COOP NATURAPLAN D'),
         (re.compile(r'\bip[- ]?suisse\b', re.I), 'IP-SUISSE D'),
         (re.compile(r'\bsuisse\s*garantie\b', re.I), 'SUISSE GARANTIE D'),
         (re.compile(r'\bagri\s*natura\b', re.I), 'AGRI NATURA D'),
         (re.compile(r'\bdemeter\b', re.I), 'DEMETER D'),
         (re.compile(r'\bkag\s*freiland\b', re.I), 'KAGfreiland D'),
         (re.compile(r'\boptigal\b', re.I), 'OPTIGAL D'),
-        (re.compile(r'\bsilvestri.*alpschwein\b', re.I), 'SILVESTRI ALPSCHWEIN D'),
-        (re.compile(r'\bsilvestri.*freiland\b', re.I), 'SILVESTRI FREILANDSCHWEIN D'),
-        (re.compile(r'\bsilvestri.*weiderind\b', re.I), 'SILVESTRI WEIDERIND D'),
         (re.compile(r'\bsilvestri.*bio.*weiderind\b', re.I), 'SILVESTRI BIO-WEIDERIND D'),
+        (re.compile(r'\bsilvestri.*weiderind\b', re.I), 'SILVESTRI WEIDERIND D'),
+        (re.compile(r'\bsilvestri.*freiland\b', re.I), 'SILVESTRI FREILANDSCHWEIN D'),
+        (re.compile(r'\bsilvestri.*alpschwein\b', re.I), 'SILVESTRI ALPSCHWEIN D'),
     ]
 
     def __init__(self, use_simple_rules: bool = True):
@@ -98,7 +110,7 @@ class ProductClassifier:
         text_fields = [
             product.get('name', ''),
             ' '.join(product.get('brands', []) if isinstance(product.get('brands'), list) else [str(product.get('brands', ''))]),
-            product.get('categories', ''),
+            ' '.join(product.get('categories', []) if isinstance(product.get('categories'), list) else [str(product.get('categories', ''))]),
             product.get('ingredients_text', '')[:200]  # Limit ingredients text length
         ]
 
@@ -106,13 +118,17 @@ class ProductClassifier:
 
         result = {}
 
-        # Apply rules
-        for pattern, value in self.SIMPLE_RULES:
+        # Apply animal rules - STOP at first match (most specific wins)
+        for pattern, value in self.ANIMAL_RULES:
             if pattern.search(full_text):
-                if value in self.ALLOWED_ANIMALS:
-                    result['animal'] = value
-                elif value in self.ALLOWED_LABELS:
-                    result['label'] = value
+                result['animal'] = value
+                break  # Stop at first match
+
+        # Apply label rules - STOP at first match (most specific wins)
+        for pattern, value in self.LABEL_RULES:
+            if pattern.search(full_text):
+                result['label'] = value
+                break  # Stop at first match
 
         return result if result else None
 
