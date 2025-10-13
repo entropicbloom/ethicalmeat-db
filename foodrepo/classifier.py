@@ -107,10 +107,9 @@ class ProductClassifier:
             return None
 
         # Combine text fields for pattern matching
+        # Note: FoodRepo v3 API does not provide brands or categories
         text_fields = [
             product.get('name', ''),
-            ' '.join(product.get('brands', []) if isinstance(product.get('brands'), list) else [str(product.get('brands', ''))]),
-            ' '.join(product.get('categories', []) if isinstance(product.get('categories'), list) else [str(product.get('categories', ''))]),
             product.get('ingredients_text', '')[:200]  # Limit ingredients text length
         ]
 

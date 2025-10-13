@@ -124,11 +124,10 @@ class MeatProductFilter:
 
     def _has_exclusions(self, product: Dict[str, Any]) -> bool:
         """Check if product has vegetarian/vegan exclusions."""
+        # Note: FoodRepo v3 API does not provide brands or categories
         text_fields = [
             product.get('name', ''),
-            product.get('categories', ''),
             product.get('ingredients_text', ''),
-            ' '.join(product.get('brands', []) if isinstance(product.get('brands'), list) else [str(product.get('brands', ''))])
         ]
 
         full_text = ' '.join(str(field) for field in text_fields if field)

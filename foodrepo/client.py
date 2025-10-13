@@ -116,11 +116,10 @@ class FoodRepoClient:
                 ingredients_trans = product_data.get("ingredients_translations", {})
                 ingredients = ingredients_trans.get("de") or ingredients_trans.get("en") or ingredients_trans.get("fr") or ingredients_trans.get("it") or ""
 
+                # Note: FoodRepo v3 API does not provide brands or categories fields
                 product = {
                     "barcode": product_data.get("barcode"),
                     "name": name,
-                    "brands": product_data.get("brands", []),
-                    "categories": product_data.get("categories", []),
                     "ingredients_text": ingredients,
                     "origins": product_data.get("origins", []),
                 }
@@ -175,11 +174,10 @@ class FoodRepoClient:
                 ingredients_trans = product_data.get("ingredients_translations", {})
                 ingredients = ingredients_trans.get("de") or ingredients_trans.get("en") or ingredients_trans.get("fr") or ingredients_trans.get("it") or ""
 
+                # Note: FoodRepo v3 API does not provide brands or categories fields
                 product = {
                     "barcode": product_data.get("barcode"),
                     "name": name,
-                    "brands": product_data.get("brands", []),
-                    "categories": product_data.get("categories", []),
                     "ingredients_text": ingredients,
                     "origins": product_data.get("origins", []),
                 }
