@@ -11,6 +11,7 @@ from typing import List, Dict, Any, Optional
 from foodrepo.client import FoodRepoClient
 from foodrepo.filters import MeatProductFilter
 from foodrepo.classifier import ProductClassifier
+from foodrepo.openfoodfacts import OpenFoodFactsClient
 from utils.mapping import EMHRatingMapper
 
 
@@ -23,7 +24,8 @@ class BarcodeMappingPipeline:
         rate_limit: float = 0.1,
         page_size: int = 1000,
         cache_dir: Optional[Path] = None,
-        use_simple_rules: bool = True
+        use_simple_rules: bool = True,
+        enrich_with_off: bool = True
     ):
         """Initialize pipeline components.
 
@@ -33,14 +35,17 @@ class BarcodeMappingPipeline:
             page_size: Products per API request
             cache_dir: Directory for caching data
             use_simple_rules: Whether to use regex rules before LLM classification
+            enrich_with_off: Whether to enrich with Open Food Facts brand data
         """
         self.foodrepo_client = FoodRepoClient(api_key=api_key, rate_limit=rate_limit, page_size=page_size)
         self.meat_filter = MeatProductFilter()
         self.classifier = ProductClassifier(use_simple_rules=use_simple_rules)
         self.emh_mapper = EMHRatingMapper()
+        self.off_client = OpenFoodFactsClient(rate_limit=0.6) if enrich_with_off else None
 
         self.cache_dir = cache_dir or Path("foodrepo_cache")
         self.cache_dir.mkdir(exist_ok=True)
+        self.enrich_with_off = enrich_with_off
 
     def run_full_pipeline(
         self,
@@ -92,6 +97,21 @@ class BarcodeMappingPipeline:
             print("❌ No meat products found after filtering")
             return []
 
+        # Step 2.5: Enrich with Open Food Facts brand data
+        if self.enrich_with_off:
+            off_cache_path = self.cache_dir / "openfoodfacts_cache.json"
+
+            # Load OFF cache if it exists
+            if use_cache:
+                self.off_client.load_cache(off_cache_path)
+
+            print(f"\n2.5. Enriching with Open Food Facts brand data")
+            meat_products = self.off_client.enrich_products_with_brands(meat_products)
+
+            # Save OFF cache
+            if use_cache:
+                self.off_client.save_cache(off_cache_path)
+
         # Step 3: Classify animal types and labels
         print(f"\n3. Classifying animal types and Swiss labels")
         classified_products = self.classifier.classify_products(meat_products)
@@ -136,7 +156,7 @@ class BarcodeMappingPipeline:
     def save_csv_summary(self, products: List[Dict[str, Any]], csv_path: Path):
         """Save summary CSV with key product information."""
         fieldnames = [
-            'barcode', 'name', 'brands', 'categories',
+            'barcode', 'name', 'brands', 'brand_source',
             'classified_animal', 'classified_label', 'classification_confidence',
             'emh_tier', 'emh_steps_to_go', 'emh_mapping_status'
         ]
@@ -288,6 +308,12 @@ def main():
         help='Skip regex rules, use only LLM classification'
     )
 
+    parser.add_argument(
+        '--no-openfoodfacts',
+        action='store_true',
+        help='Skip Open Food Facts brand enrichment'
+    )
+
     args = parser.parse_args()
 
     try:
@@ -296,7 +322,8 @@ def main():
             rate_limit=args.rate_limit,
             page_size=args.page_size,
             cache_dir=Path(args.cache_dir),
-            use_simple_rules=not args.no_rules
+            use_simple_rules=not args.no_rules,
+            enrich_with_off=not args.no_openfoodfacts
         )
 
         # Run pipeline

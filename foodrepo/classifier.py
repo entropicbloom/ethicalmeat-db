@@ -107,9 +107,10 @@ class ProductClassifier:
             return None
 
         # Combine text fields for pattern matching
-        # Note: FoodRepo v3 API does not provide brands or categories
+        # Note: FoodRepo v3 API does not provide brands, but Open Food Facts enrichment may add them
         text_fields = [
             product.get('name', ''),
+            product.get('brands', ''),  # May be added by Open Food Facts enrichment
             product.get('ingredients_text', '')[:200]  # Limit ingredients text length
         ]
 
