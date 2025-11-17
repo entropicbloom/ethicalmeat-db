@@ -1,13 +1,44 @@
-_pycache_/
+# Byte-compiled / optimized / DLL files
+__pycache__/
 *.py[cod]
 *$py.class
 *.so
+
+# Python environment
 .Python
 venv/
 env/
 ENV/
 .venv
+*.egg-info/
+dist/
+build/
+
+# Application cache and output
 cache/
 *.csv
 *.json
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.tox/
+
+# Documentation builds
+docs/_build/
