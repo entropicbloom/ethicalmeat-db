@@ -1,0 +1,884 @@
+[
+  {
+    "label": "AGRI NATURA D",
+    "label_url": "https://essenmitherz.ch/label-agri-natura-2/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Agri Natura",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-agri-natura/",
+    "tier": "OK",
+    "steps_to_go": 21
+  },
+  {
+    "label": "AGRI NATURA D",
+    "label_url": "https://essenmitherz.ch/label-agri-natura-2/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Agri Natura",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-agri-natura/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "AGRI NATURA D",
+    "label_url": "https://essenmitherz.ch/label-agri-natura-2/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Agri Natura",
+    "product_url": "https://essenmitherz.ch/rindfleisch-agri-natura/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "AGRI NATURA D",
+    "label_url": "https://essenmitherz.ch/label-agri-natura-2/",
+    "animal": "eier",
+    "product_title": "Eier Agri Natura",
+    "product_url": "https://essenmitherz.ch/eier-ip-suisse-2/",
+    "tier": "OK",
+    "steps_to_go": 20
+  },
+  {
+    "label": "Pro Montagna D",
+    "label_url": "https://essenmitherz.ch/label-agri-natura/",
+    "animal": "milch",
+    "product_title": "Milch Pro Montagna",
+    "product_url": "https://essenmitherz.ch/milch-pro-montagna/",
+    "tier": "UNCOOL",
+    "steps_to_go": 36
+  },
+  {
+    "label": "Fairmilk Aldi  D",
+    "label_url": "https://essenmitherz.ch/label-aldi-faire-milch-d/",
+    "animal": null,
+    "product_title": "Fairmilk Aldi",
+    "product_url": "https://essenmitherz.ch/aldi-faire-milch/",
+    "tier": "OK",
+    "steps_to_go": 19
+  },
+  {
+    "label": "BIO NATUR PLUS D",
+    "label_url": "https://essenmitherz.ch/label-bio-natur-plus/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Bio natur plus",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-manor-bio-natur-plus/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "BIO NATUR PLUS D",
+    "label_url": "https://essenmitherz.ch/label-bio-natur-plus/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Bio natur plus",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-manor-bio-natur-plus/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "BIO NATUR PLUS D",
+    "label_url": "https://essenmitherz.ch/label-bio-natur-plus/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Bio natur plus",
+    "product_url": "https://essenmitherz.ch/rindfleisch-manor-bio-natur-plus/",
+    "tier": "OK",
+    "steps_to_go": 16
+  },
+  {
+    "label": "BIO NATUR PLUS D",
+    "label_url": "https://essenmitherz.ch/label-bio-natur-plus/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Bio natur plus",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-bio-natur-plus/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "BIO NATUR PLUS D",
+    "label_url": "https://essenmitherz.ch/label-bio-natur-plus/",
+    "animal": "eier",
+    "product_title": "Eier bio natur plus",
+    "product_url": "https://essenmitherz.ch/eier-bio-natur-plus/",
+    "tier": "TOP",
+    "steps_to_go": 12
+  },
+  {
+    "label": "BIO ORGANIC MIT SCHWEIZER KREUZ D",
+    "label_url": "https://essenmitherz.ch/label-bio-organic/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Bio Organic (CH)",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-lidl-bio/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "BIO ORGANIC MIT SCHWEIZER KREUZ D",
+    "label_url": "https://essenmitherz.ch/label-bio-organic/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Bio Organic (CH)",
+    "product_url": "https://essenmitherz.ch/rindfleisch-bio-organic/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "BIO ORGANIC MIT SCHWEIZER KREUZ D",
+    "label_url": "https://essenmitherz.ch/label-bio-organic/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Bio Organic (CH)",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-bio-organic/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "BIO ORGANIC MIT SCHWEIZER KREUZ D",
+    "label_url": "https://essenmitherz.ch/label-bio-organic/",
+    "animal": "eier",
+    "product_title": "Eier Lidl Bio organic (CH)",
+    "product_url": "https://essenmitherz.ch/eier-lidl-bio-organic/",
+    "tier": "TOP",
+    "steps_to_go": 12
+  },
+  {
+    "label": "BIO ORGANIC MIT SCHWEIZER KREUZ D",
+    "label_url": "https://essenmitherz.ch/label-bio-organic/",
+    "animal": "milch",
+    "product_title": "Milch Bio Organic",
+    "product_url": "https://essenmitherz.ch/milch-bio-organic/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "BIO SUISSE / BIO KNOSPE D",
+    "label_url": "https://essenmitherz.ch/label-bio-suisse-bio-knospe/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Bio Knospe",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-bio-knospe/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "BIO SUISSE / BIO KNOSPE D",
+    "label_url": "https://essenmitherz.ch/label-bio-suisse-bio-knospe/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Natura-Beef Bio",
+    "product_url": "https://essenmitherz.ch/rindfleisch-natura-beef-bio/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "BIO SUISSE / BIO KNOSPE D",
+    "label_url": "https://essenmitherz.ch/label-bio-suisse-bio-knospe/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Bio Knospe",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-bio-knospe/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "BIO SUISSE / BIO KNOSPE D",
+    "label_url": "https://essenmitherz.ch/label-bio-suisse-bio-knospe/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Bio Knospe",
+    "product_url": "https://essenmitherz.ch/rindfleisch-bio-suisse-2/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "BIO SUISSE / BIO KNOSPE D",
+    "label_url": "https://essenmitherz.ch/label-bio-suisse-bio-knospe/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Natura-Veal Bio",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-natura-veal-bio/",
+    "tier": "TOP",
+    "steps_to_go": 9
+  },
+  {
+    "label": "BIO SUISSE / BIO KNOSPE D",
+    "label_url": "https://essenmitherz.ch/label-bio-suisse-bio-knospe/",
+    "animal": "eier",
+    "product_title": "Eier Bio Suisse",
+    "product_url": "https://essenmitherz.ch/eier-bio-suisse/",
+    "tier": "TOP",
+    "steps_to_go": 12
+  },
+  {
+    "label": "BIO SUISSE / BIO KNOSPE D",
+    "label_url": "https://essenmitherz.ch/label-bio-suisse-bio-knospe/",
+    "animal": "milch",
+    "product_title": "Milch Bio Suisse",
+    "product_url": "https://essenmitherz.ch/milch-bio-knospe/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "BÜNDNER PUURACHALB D",
+    "label_url": "https://essenmitherz.ch/label-buendner-puurachalb-2/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Bündner Puurachalb",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-buendner-puurachalb/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "Coop Milchprogramm D",
+    "label_url": "https://essenmitherz.ch/label-coop-milchprogramm-d/",
+    "animal": null,
+    "product_title": "Coop Milch-Programm",
+    "product_url": "https://essenmitherz.ch/coop-milch-programm/",
+    "tier": "OK",
+    "steps_to_go": 24
+  },
+  {
+    "label": "COOP NATURAFARM D",
+    "label_url": "https://essenmitherz.ch/label-coop-naturafarm/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Coop Naturafarm",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-coop-naturafarm/",
+    "tier": "TOP",
+    "steps_to_go": 4
+  },
+  {
+    "label": "COOP NATURAFARM D",
+    "label_url": "https://essenmitherz.ch/label-coop-naturafarm/",
+    "animal": "eier",
+    "product_title": "Eier Coop Naturafarm",
+    "product_url": "https://essenmitherz.ch/eier-coop-naturafarm/",
+    "tier": "TOP",
+    "steps_to_go": 13
+  },
+  {
+    "label": "Cowpassion D",
+    "label_url": "https://essenmitherz.ch/label-cowpassion-d/",
+    "animal": "milch",
+    "product_title": "Milch Cowpassion MuKa",
+    "product_url": "https://essenmitherz.ch/milch-cowpassion-muka/",
+    "tier": "TOP",
+    "steps_to_go": 12
+  },
+  {
+    "label": "DEMETER D",
+    "label_url": "https://essenmitherz.ch/label-demeter-2/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Demeter",
+    "product_url": "https://essenmitherz.ch/rindfleisch-demeter/",
+    "tier": "OK",
+    "steps_to_go": 16
+  },
+  {
+    "label": "DEMETER D",
+    "label_url": "https://essenmitherz.ch/label-demeter-2/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Demeter",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-demeter/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "DEMETER D",
+    "label_url": "https://essenmitherz.ch/label-demeter-2/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Demeter",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-demeter/",
+    "tier": "TOP",
+    "steps_to_go": 6
+  },
+  {
+    "label": "DEMETER D",
+    "label_url": "https://essenmitherz.ch/label-demeter-2/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Demeter",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-demeter/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "DEMETER D",
+    "label_url": "https://essenmitherz.ch/label-demeter-2/",
+    "animal": "eier",
+    "product_title": "Eier Demeter Hahn im Glück",
+    "product_url": "https://essenmitherz.ch/eier-demeter/",
+    "tier": "TOP",
+    "steps_to_go": 10
+  },
+  {
+    "label": "DEMETER D",
+    "label_url": "https://essenmitherz.ch/label-demeter-2/",
+    "animal": "eier",
+    "product_title": "Eier Alnatura Demeter",
+    "product_url": "https://essenmitherz.ch/eier-alnatura-demeter/",
+    "tier": "TOP",
+    "steps_to_go": 10
+  },
+  {
+    "label": "DEMETER D",
+    "label_url": "https://essenmitherz.ch/label-demeter-2/",
+    "animal": "eier",
+    "product_title": "Eier Alnatura Demeter Mobilstall",
+    "product_url": "https://essenmitherz.ch/eier-alnatura-demeter-2/",
+    "tier": "TOP",
+    "steps_to_go": 10
+  },
+  {
+    "label": "DEMETER D",
+    "label_url": "https://essenmitherz.ch/label-demeter-2/",
+    "animal": "milch",
+    "product_title": "Milch Demeter",
+    "product_url": "https://essenmitherz.ch/milch-demeter/",
+    "tier": "OK",
+    "steps_to_go": 16
+  },
+  {
+    "label": "Die Faire Milch",
+    "label_url": "https://essenmitherz.ch/label-die-faire-milch-faireswiss-d/",
+    "animal": null,
+    "product_title": "Die Faire Milch – Faireswiss",
+    "product_url": "https://essenmitherz.ch/di-faire-milch/",
+    "tier": "UNCOOL",
+    "steps_to_go": 26
+  },
+  {
+    "label": "Heidimilch D",
+    "label_url": "https://essenmitherz.ch/label-heidimilch-d/",
+    "animal": "milch",
+    "product_title": "Heidi Milch",
+    "product_url": "https://essenmitherz.ch/milch-heidi/",
+    "tier": "UNCOOL",
+    "steps_to_go": 36
+  },
+  {
+    "label": "Heumilch D",
+    "label_url": "https://essenmitherz.ch/label-heumilch-d/",
+    "animal": "milch",
+    "product_title": "Heumilch Schweiz",
+    "product_url": "https://essenmitherz.ch/milch-raus-2/",
+    "tier": "OK",
+    "steps_to_go": 22
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse-2/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch IP-SUISSE",
+    "product_url": "https://essenmitherz.ch/ip-suisse-fuer-schweinefleisch-3/",
+    "tier": "OK",
+    "steps_to_go": 21
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse-2/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch IP-SUISSE",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-ip-suisse/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse-2/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch IP-SUISSE BTS und Weidegang",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-ip-suisse-bts-und-weidegang/",
+    "tier": "OK",
+    "steps_to_go": 20
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse-2/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch IP-SUISSE",
+    "product_url": "https://essenmitherz.ch/rindfleisch-ip-suisse/",
+    "tier": "OK",
+    "steps_to_go": 22
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse-2/",
+    "animal": null,
+    "product_title": "IP-SUISSE Wiesenmilch",
+    "product_url": "https://essenmitherz.ch/ip-suisse-wiesenmilch/",
+    "tier": "OK",
+    "steps_to_go": 19
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch IP-SUISSE",
+    "product_url": "https://essenmitherz.ch/ip-suisse-fuer-schweinefleisch-3/",
+    "tier": "OK",
+    "steps_to_go": 21
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch IP-SUISSE",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-ip-suisse/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch IP-SUISSE BTS und Weidegang",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-ip-suisse-bts-und-weidegang/",
+    "tier": "OK",
+    "steps_to_go": 20
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch IP-SUISSE",
+    "product_url": "https://essenmitherz.ch/rindfleisch-ip-suisse/",
+    "tier": "OK",
+    "steps_to_go": 22
+  },
+  {
+    "label": "IP-SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-ip-suisse/",
+    "animal": null,
+    "product_title": "IP-SUISSE Wiesenmilch",
+    "product_url": "https://essenmitherz.ch/ip-suisse-wiesenmilch/",
+    "tier": "OK",
+    "steps_to_go": 19
+  },
+  {
+    "label": "KAGfreiland D",
+    "label_url": "https://essenmitherz.ch/label-kag-freiland-2/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch KAGfreiland",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-kag-freiland/",
+    "tier": "TOP",
+    "steps_to_go": 10
+  },
+  {
+    "label": "KAGfreiland D",
+    "label_url": "https://essenmitherz.ch/label-kag-freiland-2/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch KAGfreiland",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-kag-freiland/",
+    "tier": "TOP",
+    "steps_to_go": 5
+  },
+  {
+    "label": "KAGfreiland D",
+    "label_url": "https://essenmitherz.ch/label-kag-freiland-2/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch KAGfreiland",
+    "product_url": "https://essenmitherz.ch/rindfleisch-kag-freiland/",
+    "tier": "TOP",
+    "steps_to_go": 6
+  },
+  {
+    "label": "KAGfreiland D",
+    "label_url": "https://essenmitherz.ch/label-kag-freiland-2/",
+    "animal": "eier",
+    "product_title": "Eier KAGfreiland",
+    "product_url": "https://essenmitherz.ch/eier-kag-freiland/",
+    "tier": "TOP",
+    "steps_to_go": 9
+  },
+  {
+    "label": "KAGfreiland D",
+    "label_url": "https://essenmitherz.ch/label-kag-freiland-2/",
+    "animal": "milch",
+    "product_title": "Milch KAG Freiland",
+    "product_url": "https://essenmitherz.ch/milch-kag-freiland/",
+    "tier": "TOP",
+    "steps_to_go": 13
+  },
+  {
+    "label": "KRÄUTERSCHWEIN D",
+    "label_url": "https://essenmitherz.ch/label-kraeuterschwein/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Kräuterschwein",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-kraeuterschwein/",
+    "tier": "OK",
+    "steps_to_go": 21
+  },
+  {
+    "label": "MIGROS BIO MIT SCHWEIZERKREUZ D",
+    "label_url": "https://essenmitherz.ch/label-migros-bio-mit-schweizerkreuz/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Migros Bio (CH)",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-migros-bio/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "MIGROS BIO MIT SCHWEIZERKREUZ D",
+    "label_url": "https://essenmitherz.ch/label-migros-bio-mit-schweizerkreuz/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Migros Bio (CH)",
+    "product_url": "https://essenmitherz.ch/rindfleisch-migros-bio/",
+    "tier": "OK",
+    "steps_to_go": 16
+  },
+  {
+    "label": "MIGROS BIO MIT SCHWEIZERKREUZ D",
+    "label_url": "https://essenmitherz.ch/label-migros-bio-mit-schweizerkreuz/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Migros Bio (CH)",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-migros-bio/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "MIGROS BIO MIT SCHWEIZERKREUZ D",
+    "label_url": "https://essenmitherz.ch/label-migros-bio-mit-schweizerkreuz/",
+    "animal": "eier",
+    "product_title": "Eier Migros Bio CH",
+    "product_url": "https://essenmitherz.ch/eier-migros-bio/",
+    "tier": "TOP",
+    "steps_to_go": 12
+  },
+  {
+    "label": "MIGROS BIO OHNE SCHWEIZERKREUZ D",
+    "label_url": "https://essenmitherz.ch/label-migros-bio-ohne-schweizerkreuz/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Migros Bio (EU)",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-migros-bio-2/",
+    "tier": "UNCOOL",
+    "steps_to_go": 29
+  },
+  {
+    "label": "MIGROS BIO WEIDE-BEEF D",
+    "label_url": "https://essenmitherz.ch/label-migros-bio-weide-beef/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Migros Bio-Weide-Beef",
+    "product_url": "https://essenmitherz.ch/rindfleisch-bio-suisse/",
+    "tier": "TOP",
+    "steps_to_go": 11
+  },
+  {
+    "label": "Migros nachhaltige Milch D",
+    "label_url": "https://essenmitherz.ch/label-migros-nachhaltige-milch-d/",
+    "animal": null,
+    "product_title": "Migros nachhaltige Milch",
+    "product_url": "https://essenmitherz.ch/migros-nachhaltige-milch/",
+    "tier": "UNCOOL",
+    "steps_to_go": 26
+  },
+  {
+    "label": "MIGROS WEIDE-BEEF D",
+    "label_url": "https://essenmitherz.ch/label-migros-weide-beef/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Migros Weide-Beef",
+    "product_url": "https://essenmitherz.ch/rindfleisch-migros-weide-beef/",
+    "tier": "TOP",
+    "steps_to_go": 13
+  },
+  {
+    "label": "Milch Grüner Teppich D",
+    "label_url": "https://essenmitherz.ch/label-milch-gruener-teppich-d/",
+    "animal": "milch",
+    "product_title": "Milch Grüner Teppich",
+    "product_url": "https://essenmitherz.ch/milch-gruener-teppich/",
+    "tier": "UNCOOL",
+    "steps_to_go": 28
+  },
+  {
+    "label": "NATURA-BEEF D",
+    "label_url": "https://essenmitherz.ch/label-natura-beef/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Natura-Beef Bio",
+    "product_url": "https://essenmitherz.ch/rindfleisch-natura-beef-bio/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "NATURA-BEEF D",
+    "label_url": "https://essenmitherz.ch/label-natura-beef/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Natura-Beef",
+    "product_url": "https://essenmitherz.ch/rindfleisch-natura-beef/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "NATURA-VEAL DE",
+    "label_url": "https://essenmitherz.ch/label-natura-veal/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Natura-Veal",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-natura-veal/",
+    "tier": "TOP",
+    "steps_to_go": 9
+  },
+  {
+    "label": "NATURA-VEAL DE",
+    "label_url": "https://essenmitherz.ch/label-natura-veal/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Natura-Veal Bio",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-natura-veal-bio/",
+    "tier": "TOP",
+    "steps_to_go": 9
+  },
+  {
+    "label": "COOP NATURAPLAN D",
+    "label_url": "https://essenmitherz.ch/label-naturaplan/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Coop Naturaplan",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-naturaplan/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "COOP NATURAPLAN D",
+    "label_url": "https://essenmitherz.ch/label-naturaplan/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Coop Naturaplan",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-naturaplan/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "COOP NATURAPLAN D",
+    "label_url": "https://essenmitherz.ch/label-naturaplan/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Coop Naturaplan",
+    "product_url": "https://essenmitherz.ch/rindfleisch-naturaplan/",
+    "tier": "OK",
+    "steps_to_go": 16
+  },
+  {
+    "label": "COOP NATURAPLAN D",
+    "label_url": "https://essenmitherz.ch/label-naturaplan/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Coop Naturaplan",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-naturaplan/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "COOP NATURAPLAN D",
+    "label_url": "https://essenmitherz.ch/label-naturaplan/",
+    "animal": "eier",
+    "product_title": "Eier Coop Naturaplan",
+    "product_url": "https://essenmitherz.ch/eier-naturaplan/",
+    "tier": "TOP",
+    "steps_to_go": 12
+  },
+  {
+    "label": "COOP NATURAPLAN D",
+    "label_url": "https://essenmitherz.ch/label-naturaplan/",
+    "animal": "milch",
+    "product_title": "Milch Coop Naturaplan",
+    "product_url": "https://essenmitherz.ch/milch-coop-naturaplan/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "NATURE SUISSE BIO D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse-bio/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Nature Suisse Bio",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-aldi-nature-suisse-bio/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "NATURE SUISSE BIO D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse-bio/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Nature Suisse Bio",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-aldi-nature-suisse-bio-2/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "NATURE SUISSE BIO D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse-bio/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Nature Suisse Bio",
+    "product_url": "https://essenmitherz.ch/rindfleisch-aldi-nature-suisse-bio/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "NATURE SUISSE BIO D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse-bio/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Nature Suisse Bio",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-nature-suisse-bio/",
+    "tier": "TOP",
+    "steps_to_go": 8
+  },
+  {
+    "label": "NATURE SUISSE BIO D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse-bio/",
+    "animal": "milch",
+    "product_title": "Milch Nature Suisse Bio",
+    "product_url": "https://essenmitherz.ch/milch-coop-naturaplan-2/",
+    "tier": "OK",
+    "steps_to_go": 17
+  },
+  {
+    "label": "NATURE SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse/",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Nature Suisse",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-aldi-nature-suisse/",
+    "tier": "OK",
+    "steps_to_go": 21
+  },
+  {
+    "label": "NATURE SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Nature Suisse",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-aldi-nature-suisse/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "NATURE SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Nature Suisse",
+    "product_url": "https://essenmitherz.ch/rindfleisch-aldi-nature-suisse/",
+    "tier": "OK",
+    "steps_to_go": 23
+  },
+  {
+    "label": "NATURE SUISSE D",
+    "label_url": "https://essenmitherz.ch/label-nature-suisse/",
+    "animal": "eier",
+    "product_title": "Eier Nature Suisse",
+    "product_url": "https://essenmitherz.ch/eier-nature-suisse/",
+    "tier": "OK",
+    "steps_to_go": 20
+  },
+  {
+    "label": "OPTIGAL D",
+    "label_url": "https://essenmitherz.ch/label-optigal/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Optigal",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-optigal/",
+    "tier": "UNCOOL",
+    "steps_to_go": 30
+  },
+  {
+    "label": "Retour aux sources D",
+    "label_url": "https://essenmitherz.ch/label-retour-aux-sources-d/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Retour aux Sources Aldi",
+    "product_url": "https://essenmitherz.ch/rindfleisch-retour-aux-sources/",
+    "tier": "TOP",
+    "steps_to_go": 6
+  },
+  {
+    "label": "Retour aux sources D",
+    "label_url": "https://essenmitherz.ch/label-retour-aux-sources-d/",
+    "animal": "eier",
+    "product_title": "Eier Retour aux Sources Aldi",
+    "product_url": "https://essenmitherz.ch/eier-retour-aux-sources/",
+    "tier": "TOP",
+    "steps_to_go": 10
+  },
+  {
+    "label": "Retour aux sources D",
+    "label_url": "https://essenmitherz.ch/label-retour-aux-sources-d/",
+    "animal": "milch",
+    "product_title": "Milch Retour aux Sources Aldi",
+    "product_url": "https://essenmitherz.ch/milch-retour-aux-sources/",
+    "tier": "TOP",
+    "steps_to_go": 13
+  },
+  {
+    "label": "SILVESTRI ALPSCHWEIN D",
+    "label_url": "https://essenmitherz.ch/label-silvestri-alpschwein/",
+    "animal": "schweinefleisch",
+    "product_title": "Alpschwein Silvestri IP-SUISSE",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-alpschwein-ip-suisse/",
+    "tier": "TOP",
+    "steps_to_go": 13
+  },
+  {
+    "label": "SILVESTRI FREILANDSCHWEIN D",
+    "label_url": "https://essenmitherz.ch/label-silvestri-freilandschwein",
+    "animal": "schweinefleisch",
+    "product_title": "Schweinefleisch Silvestri Freilandschwein",
+    "product_url": "https://essenmitherz.ch/schweinefleisch-silvestri-freilandschwein/",
+    "tier": "TOP",
+    "steps_to_go": 13
+  },
+  {
+    "label": "SILVESTRI BIO-WEIDERIND D",
+    "label_url": "https://essenmitherz.ch/label-silvestri-weiderind-2/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Silvestri Bio-Weiderind",
+    "product_url": "https://essenmitherz.ch/rindfleisch-weidebeef-silvestri-weiderind/",
+    "tier": "TOP",
+    "steps_to_go": 7
+  },
+  {
+    "label": "SILVESTRI WEIDERIND D",
+    "label_url": "https://essenmitherz.ch/label-silvestri-weiderind/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Silvestri Weiderind",
+    "product_url": "https://essenmitherz.ch/rindfleisch-weidebeef-silvestri-weiderind-2/",
+    "tier": "TOP",
+    "steps_to_go": 13
+  },
+  {
+    "label": "SUISSE GARANTIE D",
+    "label_url": "https://essenmitherz.ch/label-suisse-garantie/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Suisse Garantie",
+    "product_url": "https://essenmitherz.ch/rindfleisch-suisse-garantie/",
+    "tier": "UNCOOL",
+    "steps_to_go": 35
+  },
+  {
+    "label": "SUISSE GARANTIE D",
+    "label_url": "https://essenmitherz.ch/label-suisse-garantie/",
+    "animal": "kalbfleisch",
+    "product_title": "Kalbfleisch Suisse Garantie",
+    "product_url": "https://essenmitherz.ch/kalbfleisch-suisse-garantie/",
+    "tier": "UNCOOL",
+    "steps_to_go": 35
+  },
+  {
+    "label": "SUISSE GARANTIE D",
+    "label_url": "https://essenmitherz.ch/label-suisse-garantie/",
+    "animal": "poulet",
+    "product_title": "Pouletfleisch Suisse Garantie",
+    "product_url": "https://essenmitherz.ch/pouletfleisch-suisse-garantie/",
+    "tier": "UNCOOL",
+    "steps_to_go": 32
+  },
+  {
+    "label": "SUISSE GARANTIE D",
+    "label_url": "https://essenmitherz.ch/label-suisse-garantie/",
+    "animal": "eier",
+    "product_title": "Eier Suisse Garantie Freiland",
+    "product_url": "https://essenmitherz.ch/eier-suisse-garantie-freiland/",
+    "tier": "OK",
+    "steps_to_go": 22
+  },
+  {
+    "label": "SUISSE GARANTIE D",
+    "label_url": "https://essenmitherz.ch/label-suisse-garantie/",
+    "animal": "eier",
+    "product_title": "Eier Suisse Garantie Bodenhaltung",
+    "product_url": "https://essenmitherz.ch/eier-suisse-garantie-bodenhaltung/",
+    "tier": "UNCOOL",
+    "steps_to_go": 31
+  },
+  {
+    "label": "SUISSE GARANTIE D",
+    "label_url": "https://essenmitherz.ch/label-suisse-garantie/",
+    "animal": "milch",
+    "product_title": "Milch Suisse Garantie",
+    "product_url": "https://essenmitherz.ch/milch-suisse-garantie/",
+    "tier": "UNCOOL",
+    "steps_to_go": 36
+  },
+  {
+    "label": "SWISS BLACK ANGUS D",
+    "label_url": "https://essenmitherz.ch/label-swiss-black-angus/",
+    "animal": "rindfleisch",
+    "product_title": "Rindfleisch Swiss Black Angus",
+    "product_url": "https://essenmitherz.ch/rindfleisch-swiss-black-angus-ip-suisse/",
+    "tier": "TOP",
+    "steps_to_go": 13
+  }
+]
